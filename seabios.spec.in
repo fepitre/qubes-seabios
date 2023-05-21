@@ -16,6 +16,9 @@ Source0:        https://www.seabios.org/downloads/%{name}-%{version}.tar.gz
 Patch0001:      0001-Workaround-for-a-win8.1-32-S4-resume-bug.patch
 Patch0003:      0003-vgabios-Reorder-video-modes-to-work-around-a-Windows.patch
 
+# Qubes patch set
+Patch0101:      0101-Add-2K-et-UWQHD-resolutions.patch
+
 Source10:       config.vga-cirrus
 Source11:       config.vga-isavga
 Source12:       config.vga-qxl

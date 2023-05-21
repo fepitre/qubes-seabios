@@ -1,0 +1,31 @@
+From 094e71a36681a646740e29ba130fc1326442fb92 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fr=C3=A9d=C3=A9ric=20Pierret=20=28fepitre=29?=
+ <frederic.pierret@qubes-os.org>
+Date: Sun, 21 May 2023 11:45:08 +0200
+Subject: [PATCH] Add 2K et UWQHD resolutions
+
+---
+ vgasrc/svgamodes.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/vgasrc/svgamodes.c b/vgasrc/svgamodes.c
+index 2543b95..f16acb8 100644
+--- a/vgasrc/svgamodes.c
++++ b/vgasrc/svgamodes.c
+@@ -100,5 +100,13 @@ struct generic_svga_mode svga_modes[] VAR16 = {
+     { 0x19c, { MM_DIRECT, 4096, 2160, 32, 8, 16, SEG_GRAPH } },
+     { 0x19d, { MM_DIRECT, 5120, 2160, 16, 8, 16, SEG_GRAPH } },
+     { 0x19e, { MM_DIRECT, 5120, 2160, 32, 8, 16, SEG_GRAPH } },
++
++    /* custom HD resolutions: 2K, UWQHD */
++    { 0x19f, { MM_DIRECT, 2256,  1504, 16, 8, 16, SEG_GRAPH } },
++    { 0x1a0, { MM_DIRECT, 2256,  1504, 24, 8, 16, SEG_GRAPH } },
++    { 0x1a1, { MM_DIRECT, 2256,  1504, 32, 8, 16, SEG_GRAPH } },
++    { 0x1a2, { MM_DIRECT, 3440,  1440, 16, 8, 16, SEG_GRAPH } },
++    { 0x1a3, { MM_DIRECT, 3440,  1440, 24, 8, 16, SEG_GRAPH } },
++    { 0x1a4, { MM_DIRECT, 3440,  1440, 32, 8, 16, SEG_GRAPH } },
+ };
+ unsigned int svga_mcount VAR16 = ARRAY_SIZE(svga_modes);
+-- 
+2.40.1
+
